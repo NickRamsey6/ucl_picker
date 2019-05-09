@@ -7,7 +7,7 @@ $(document).ready(function() {
     if(team1==="Inter Milan 2009-2010") {
       $("#T1Inter10").show();
     }
-    else if(team1 ==="Chelsea 2011-2012") {
+    else if(team1==="Chelsea 2011-2012") {
       $("#T1Chelsea12").show();
     }
     if(team2==="Inter Milan 2009-2010") {
