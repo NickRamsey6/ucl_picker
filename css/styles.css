@@ -1,0 +1,28 @@
+.teamPic {
+  height: 200px;
+  width: 30%
+}
+
+#matchup {
+  display: none;
+}
+
+#result {
+  display: none;
+}
+
+#T1Chelsea12 {
+  display: none;
+}
+
+#T1Inter10 {
+  display: none;
+}
+
+#T2Chelsea12 {
+  display: none;
+}
+
+#T2Inter10 {
+  display: none;
+}

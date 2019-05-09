@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Champions League Picker</title>
+  </head>
+  <body>
+    <div id="opening" class="container">
+      <h1>UEFA Champions League Simulator</h1>
+      <div id="team1">
+        <h3>Select Team 1</h3>
+        <select class="form-control" id="team1">
+          <option></option>
+          <option>Inter Milan 2009-2010</option>
+          <option>Chelsea 2011-2012</option>
+        </select>
+      </div>
+      <br>
+      <div id="team2">
+        <h3>Select Team 2</h3>
+        <select class="form-control" id="team2">
+          <option></option>
+          <option>Inter Milan 2009-2010</option>
+          <option>Chelsea 2011-2012</option>
+        </select>
+      </div>
+      <br>
+      <button id="preview" type="button" class="btn btn-primary">Preview</button>
+    </div>
+    <div id="matchup" class="jumbotron">
+      <div id="T1Chelsea12">
+        <img src="https://clearviewtv.com.ng/wp-content/uploads/2018/11/didier-drogba.jpg" alt="Drogba" class="teamPic">
+        <img src="https://d2x51gyc4ptf2q.cloudfront.net/content/uploads/2015/09/82a5a0ec245ef0d692480dd0084fb2d8_large.jpeg" alt="Terry" class="teamPic">
+        <img src="https://secure.i.telegraph.co.uk/multimedia/archive/02223/di-matteo_2223460b.jpg" alt="diMatteo" class="teamPic">
+      </div>
+      <div id="T1Inter10">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Diego_Milito_-_Inter_Mailand_%283%29.jpg" alt="Milito" class="teamPic">
+        <img src="https://s.hs-data.com/bilder/spieler/gross/1056.jpg" alt="Zanetti" class="teamPic">
+        <img src="https://metro.co.uk/wp-content/uploads/2017/04/100236688.jpg?quality=90&strip=all" alt="Mourinho" class="teamPic">
+      </div>
+      <br>
+      <h2>Vs.</h2>
+      <div id="T2Chelsea12">
+        <img src="https://clearviewtv.com.ng/wp-content/uploads/2018/11/didier-drogba.jpg" alt="Drogba" class="teamPic">
+        <img src="https://d2x51gyc4ptf2q.cloudfront.net/content/uploads/2015/09/82a5a0ec245ef0d692480dd0084fb2d8_large.jpeg" alt="Terry" class="teamPic">
+        <img src="https://secure.i.telegraph.co.uk/multimedia/archive/02223/di-matteo_2223460b.jpg" alt="diMatteo" class="teamPic">
+      </div>
+      <div id="T2Inter10">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Diego_Milito_-_Inter_Mailand_%283%29.jpg" alt="Milito" class="teamPic">
+        <img src="https://s.hs-data.com/bilder/spieler/gross/1056.jpg" alt="Zanetti" class="teamPic">
+        <img src="https://metro.co.uk/wp-content/uploads/2017/04/100236688.jpg?quality=90&strip=all" alt="Mourinho" class="teamPic">
+      </div>
+      <br>
+      <button id="play" type="button" class="btn btn-primary">Play</button>
+    </div>
+    <div id="result">
+      <h1>Winner:</h1>
+      <img src="https://i.makeagif.com/media/5-23-2016/RWmlro.gif" alt="Inter Champions" class="winnerGif">
+    </div>
+  </body>
+</html>
