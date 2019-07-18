@@ -29,12 +29,13 @@ $(document).ready(function() {
   $("#preview").click(function(event) {
     var team1 = $("select#team1").val();
     var team2 = $("select#team2").val();
-    document.getElementById("team1Scorer").innerHTML='<img src ="'+game.array[team1].pic+'">';
+    // document.getElementById("team1Scorer").innerHTML='<img src ="'+game.array[team1].pic+'">';
     // console.log(team2);
     // var img = document.createElement("IMG");
     // img.src = "images/"+game.array[team1].pic;
     // document.getElementById("#team1Scorer").appendChild(img);
     $("#team1Scorer").append(game.array[team1].scorer);
+    document.getElementById("team1ScorerPic").src=game.array[team1].pic;
     $("#team1Captain").append(game.array[team1].captain);
     $("#team1Manager").append(game.array[team1].manager);
     $("#team2Scorer").append(game.array[team2].scorer);
