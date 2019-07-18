@@ -28,10 +28,15 @@ $(document).ready(function() {
   $("#preview").click(function(event) {
     var team1 = $("select#team1").val();
     var team2 = $("select#team2").val();
-    console.log(team1);
-    console.log(team2);
-    console.log(game.array[team1].captain);
-    console.log(game.array[team2].captain);
+    // console.log(team1);
+    // console.log(team2);
+    $("#team1Scorer").append(game.array[team1].scorer);
+    $("#team1Captain").append(game.array[team1].captain);
+    $("#team1Manager").append(game.array[team1].manager);
+    $("#team2Scorer").append(game.array[team2].scorer);
+    $("#team2Captain").append(game.array[team2].captain);
+    $("#team2Manager").append(game.array[team2].manager);
+    // console.log(game.array[team2].captain);
     $("#opening").hide();
     $("#matchup").show();
 
