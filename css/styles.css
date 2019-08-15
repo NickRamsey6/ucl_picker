@@ -1,7 +1,7 @@
-#team1ScorerPic {
+/* #team1ScorerPic {
   height: 400px;
   width: 40%
-}
+} */
 
 #matchup {
   display: none;
@@ -9,4 +9,9 @@
 
 #result {
   display: none;
+}
+
+.matchupPic {
+  height: 400px;
+  width: 40%
 }
