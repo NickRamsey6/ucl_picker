@@ -21,18 +21,18 @@ class Game {
 }
 
 
-var Chelsea = new Team("Chelsea 2011-2012", "Drogba", "Terry", "DiMatteo", 'images/chels1112/drogba.jpg', 'images/chels1112/jt.jpg', 'images/chels1112/dimatteo.jpg', 85, 84, 84, 4);
+var Chelsea = new Team("Chelsea 2011-2012", "Drogba", "Terry", "DiMatteo", 'images/chels1112/drogba.jpg', 'images/chels1112/jt.jpg', 'images/chels1112/dimatteo.jpg', 88, 81, 82, 4);
 var Inter = new Team("Inter Milan 2009-2010", "Milito", "Zanetti", "Mourinho", 'images/inter0910/milito.jpeg', 'images/inter0910/zanetti.jpeg', 'images/inter0910/mourinho.jpeg', 89, 84, 83, 10);
 var game = new Game;
 game.array.push(Inter);
 game.array.push(Chelsea);
 
-var goalsFor = function(team1Offense, team2Deffense) {
-  return team1Offense - team2Deffense;
+var goalsFor = function(team1Offense, team2Defense) {
+  return team1Offense - team2Defense;
 }
 
-var goalsAgainst = function(team1Deffense, team2Offense) {
-  return team1Deffense - team2Offense
+var goalsAgainst = function(team1Defense, team2Offense) {
+  return team1Defense - team2Offense
 }
 
 var mindGames = function(team1Tactics, team2Tactics) {
