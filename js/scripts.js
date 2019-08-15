@@ -1,13 +1,17 @@
 //Biz Logic
 class Team {
-  constructor (teamName, scorer, captain, manager, scorerPic, captainPic, managerPic) {
+  constructor (teamName, scorer, captain, manager, scorerPic, captainPic, managerPic, offense, midfield, defense, tactics) {
     this.teamName = teamName;
     this.scorer = scorer;
     this.captain = captain;
     this.manager = manager;
     this.scorerPic = scorerPic;
     this.captainPic = captainPic;
-    this.managerPic = managerPic
+    this.managerPic = managerPic;
+    this.offense = offense;
+    this.midfield = midfield;
+    this.defense = defense;
+    this.tactics = tactics
   }
 }
 class Game {
@@ -17,11 +21,23 @@ class Game {
 }
 
 
-var Chelsea = new Team("Chelsea 2011-2012", "Drogba", "Terry", "DiMatteo", 'images/chels1112/drogba.jpg', 'images/chels1112/jt.jpg', 'images/chels1112/dimatteo.jpg');
-var Inter = new Team("Inter Milan 2009-2010", "Milito", "Zanetti", "Mourinho", 'images/inter0910/milito.jpeg', 'images/inter0910/zanetti.jpeg', 'images/inter0910/mourinho.jpeg');
+var Chelsea = new Team("Chelsea 2011-2012", "Drogba", "Terry", "DiMatteo", 'images/chels1112/drogba.jpg', 'images/chels1112/jt.jpg', 'images/chels1112/dimatteo.jpg', 85, 84, 84, 4);
+var Inter = new Team("Inter Milan 2009-2010", "Milito", "Zanetti", "Mourinho", 'images/inter0910/milito.jpeg', 'images/inter0910/zanetti.jpeg', 'images/inter0910/mourinho.jpeg', 89, 84, 83, 10);
 var game = new Game;
 game.array.push(Inter);
 game.array.push(Chelsea);
+
+var goalsFor = function(team1Offense, team2Deffense) {
+  return team1Offense - team2Deffense;
+}
+
+var goalsAgainst = function(team1Deffense, team2Offense) {
+  return team1Deffense - team2Offense
+}
+
+var mindGames = function(team1Tactics, team2Tactics) {
+  return team1Tactics - team2Tactics
+}
 
 
 
@@ -66,5 +82,15 @@ $(document).ready(function() {
   // $("#play").click(function(event) {
   //   $("#matchup").hide();
   //   $("#result").show();
+  $("#play").click(function(event) {
+    $("#matchup").hide();
+    $("#result").show();
+    var off = goalsFor(game.array[team1].offense, game.array[team2].defense);
+    console.log(off)
+    var def = goalsAgainst(game.array[team1].defense, game.array[team2].offense);
+    console.log(def)
+    var coach = mindGames(game.array[team1].tactics, game.array[team2].tactics);
+    console.log(coach)
+  })
   })
 })
