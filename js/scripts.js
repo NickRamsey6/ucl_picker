@@ -37,6 +37,7 @@ game.array.push(Barca1415);
 game.array.push(RealMadrid1516);
 game.array.push(RealMadrid1617);
 game.array.push(RealMadrid1718);
+game.array.push(Liverpool1819);
 
 // var goalsFor = function(team1Offense, team2Defense) {
 //   return team1Offense - team2Defense;
