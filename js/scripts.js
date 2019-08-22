@@ -62,12 +62,14 @@ $(document).ready(function() {
     var team1 = $("select#team1").val();
     var team2 = $("select#team2").val();
 
+    $("#team1Name").append(game.array[team1].teamName);
     $("#team1Scorer").append(game.array[team1].scorer);
     document.getElementById("team1ScorerPic").src=game.array[team1].scorerPic;
     $("#team1Captain").append(game.array[team1].captain);
     document.getElementById("team1CaptainPic").src=game.array[team1].captainPic;
     $("#team1Manager").append(game.array[team1].manager);
     document.getElementById("team1ManagerPic").src=game.array[team1].managerPic;
+    $("#team2Name").append(game.array[team2].teamName);
     $("#team2Scorer").append(game.array[team2].scorer);
     document.getElementById("team2ScorerPic").src=game.array[team2].scorerPic;
     $("#team2Captain").append(game.array[team2].captain);
