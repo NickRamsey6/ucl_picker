@@ -15,3 +15,17 @@
   height: 400px;
   width: 40%
 }
+/* 
+body {
+  background-image: url("https://i.pinimg.com/originals/7e/d8/6e/7ed86e3f6d18c6f4a7c77cd1a0abf526.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+} */
+
+body{
+  background: url("https://i.pinimg.com/originals/7e/d8/6e/7ed86e3f6d18c6f4a7c77cd1a0abf526.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
