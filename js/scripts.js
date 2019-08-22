@@ -1,6 +1,6 @@
 //Biz Logic
 class Team {
-  constructor (teamName, scorer, captain, manager, scorerPic, captainPic, managerPic) {
+  constructor (teamName, scorer, captain, manager, scorerPic, captainPic, managerPic, sotm, sota, crf, cra) {
     this.teamName = teamName;
     this.scorer = scorer;
     this.captain = captain;
@@ -8,6 +8,10 @@ class Team {
     this.scorerPic = scorerPic;
     this.captainPic = captainPic;
     this.managerPic = managerPic;
+    this.sotm = sotm;
+    this.sota = sota;
+    this.crf = crf;
+    this.cra = cra
   }
 }
 class Game {
@@ -17,17 +21,17 @@ class Game {
 }
 
 
-var Inter0910 = new Team("Inter Milan 2009-2010", "Milito", "Zanetti", "Mourinho", 'images/inter0910/milito.jpeg', 'images/inter0910/zanetti.jpeg', 'images/inter0910/mourinho.jpeg');
-var Barca1011 = new Team("Barcelona 2010-2011", "Messi", "Puyol", "Guardiola", 'images/barca1011/messi.jpg', 'images/barca1011/puyol.jpg', 'images/barca1011/pep.jpg')
-var Chelsea1112 = new Team("Chelsea 2011-2012", "Drogba", "Terry", "DiMatteo", 'images/chels1112/drogba.jpg', 'images/chels1112/jt.jpg', 'images/chels1112/dimatteo.jpg');
-var Bayern1213 = new Team("Bayern Munich 2012-2013", "Muller", "Lahm", "Heynckes", 'images/bayern1213/muller.png', 'images/bayern1213/lahm.jpg', 'images/bayern1213/heynckes.jpg');
-var RealMadrid1314 = new Team("Real Madrid 2013-2014", "Ronaldo", "Ramos", "Ancelotti", 'images/realmadrid1314/ronaldo.jpg', 'images/realmadrid1314/ramos.jpg', 'images/realmadrid1314/ancelotti.jpg');
-var Barca1415 = new Team("Barcelona 2014-2015", "Messi", "Xavi", "Enrique", 'images/barca1415/messi.jpg', 'images/barca1415/xavi.jpg', 'images/barca1415/enrique.jpg');
-var RealMadrid1516 = new Team("Real Madrid 2015-2016", "Ronaldo", "Ramos", "Zidane", 'images/realmadrid1516/ronaldo.jpg', 'images/realmadrid1516/ramos.jpg', 'images/realmadrid1516/zidane.jpg');
-var RealMadrid1617 = new Team("Real Madrid 2016-2017", "Ronaldo", "Ramos", "Zidane", 'images/realmadrid1617/ronaldo.jpg', 'images/realmadrid1617/ramos.jpg', 'images/realmadrid1617/zidane.jpg');
-var RealMadrid1718 = new Team("Real Madrid 2017-2018", "Ronaldo", "Ramos", "Zidane", 'images/realmadrid1718/ronaldo.jpg', 'images/realmadrid1718/ramos.jpg', 'images/realmadrid1718/zidane.jpg');
-var Liverpool1819 = new Team("Liverpool 2018-2019", "Salah", "Hnderson", "Klopp", 'images/liverpool1819/salah.jpg', 'images/liverpool1819/henderson.jpg', 'images/liverpool1819/klopp.jpg');
-var game = new Game;
+const Inter0910 = new Team("Inter Milan 2009-2010", "Milito", "Zanetti", "Mourinho", 'images/inter0910/milito.jpeg', 'images/inter0910/zanetti.jpeg', 'images/inter0910/mourinho.jpeg', 4.69, 3.77, 0.28, 0.18);
+const Barca1011 = new Team("Barcelona 2010-2011", "Messi", "Puyol", "Guardiola", 'images/barca1011/messi.jpg', 'images/barca1011/puyol.jpg', 'images/barca1011/pep.jpg', 7.54, 2.85, 0.31, 0.24)
+const Chelsea1112 = new Team("Chelsea 2011-2012", "Drogba", "Terry", "DiMatteo", 'images/chels1112/drogba.jpg', 'images/chels1112/jt.jpg', 'images/chels1112/dimatteo.jpg');
+const Bayern1213 = new Team("Bayern Munich 2012-2013", "Muller", "Lahm", "Heynckes", 'images/bayern1213/muller.png', 'images/bayern1213/lahm.jpg', 'images/bayern1213/heynckes.jpg');
+const RealMadrid1314 = new Team("Real Madrid 2013-2014", "Ronaldo", "Ramos", "Ancelotti", 'images/realmadrid1314/ronaldo.jpg', 'images/realmadrid1314/ramos.jpg', 'images/realmadrid1314/ancelotti.jpg');
+const Barca1415 = new Team("Barcelona 2014-2015", "Messi", "Xavi", "Enrique", 'images/barca1415/messi.jpg', 'images/barca1415/xavi.jpg', 'images/barca1415/enrique.jpg');
+const RealMadrid1516 = new Team("Real Madrid 2015-2016", "Ronaldo", "Ramos", "Zidane", 'images/realmadrid1516/ronaldo.jpg', 'images/realmadrid1516/ramos.jpg', 'images/realmadrid1516/zidane.jpg');
+const RealMadrid1617 = new Team("Real Madrid 2016-2017", "Ronaldo", "Ramos", "Zidane", 'images/realmadrid1617/ronaldo.jpg', 'images/realmadrid1617/ramos.jpg', 'images/realmadrid1617/zidane.jpg');
+const RealMadrid1718 = new Team("Real Madrid 2017-2018", "Ronaldo", "Ramos", "Zidane", 'images/realmadrid1718/ronaldo.jpg', 'images/realmadrid1718/ramos.jpg', 'images/realmadrid1718/zidane.jpg');
+const Liverpool1819 = new Team("Liverpool 2018-2019", "Salah", "Hnderson", "Klopp", 'images/liverpool1819/salah.jpg', 'images/liverpool1819/henderson.jpg', 'images/liverpool1819/klopp.jpg');
+const game = new Game;
 game.array.push(Inter0910);
 game.array.push(Barca1011);
 game.array.push(Chelsea1112);
@@ -50,6 +54,23 @@ game.array.push(Liverpool1819);
 // var mindGames = function(team1Tactics, team2Tactics) {
 //   return team1Tactics - team2Tactics
 // }
+
+const team1Chances = function(t1sotm, t2sota) {
+  let sum = t1sotm + t2sota
+  return sum/2;
+}
+
+const t1score = function(t1sotm, t2sota, t1crf, t2cra) {
+  return ((t1sotm + t2sota)/2) * ((t1crf + t2cra)/2);
+}
+
+const t2score = function(t2sotm, t1sota, t2crf, t1cra) {
+  return ((t2sotm + t1sota)/2) * ((t2crf + t1cra)/2);
+}
+
+const final = function (t1score, t2score) {
+  return t1score - t2score;
+}
 
 
 
@@ -79,6 +100,7 @@ $(document).ready(function() {
 
     $("#opening").hide();
     $("#matchup").show();
+    // console.log(game.array[team1].scorer);
   //   if(team1==="Inter Milan 2009-2010") {
   //     $("#T1Inter10").show();
   //     $("#scorer").empty().append(Inter.scorer);
@@ -97,10 +119,20 @@ $(document).ready(function() {
   // $("#play").click(function(event) {
   //   $("#matchup").hide();
   //   $("#result").show();
-  })
   $("#play").click(function(event) {
     $("#matchup").hide();
     $("#result").show();
+    let chances = team1Chances(game.array[team1].sotm, game.array[team2].sota);
+    console.log(chances);
+    let t1 = t1score(game.array[team1].sotm, game.array[team2].sota, game.array[team1].crf, game.array[team2].cra);
+    console.log(t1)
+    let t2 = t2score(game.array[team2].sotm, game.array[team1].sota, game.array[team2].crf, game.array[team1].cra);
+    console.log(t2);
+    let result = final(t1, t2);
+    console.log(result);
+  })
+    // let score = team1Score(game.array[team1.sotm], game.array[team2.sota], game.array[team1.crf], game.array[team2.cra]);
+    // console.log(score);
     // var off = goalsFor(game.array[team1].offense, game.array[team2].defense);
     // console.log(off)
     // var def = goalsAgainst(game.array[team1].defense, game.array[team2].offense);
