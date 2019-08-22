@@ -12,43 +12,47 @@
     <title>Champions League Picker</title>
   </head>
   <body>
+    <h1 id="header">UEFA Champions League Simulator</h1>
     <div id="opening" class="container">
-      <h1>UEFA Champions League Simulator</h1>
-      <div id="team1">
-        <h3>Select Team 1</h3>
-        <select class="form-control" id="team1">
-          <option></option>
-          <option value="0">Inter Milan 2009-2010</option>
-          <option value="1">Barcelona 2010-2011</option>
-          <option value="2">Chelsea 2011-2012</option>
-          <option value="3">Bayern Munich 2012-2013</option>
-          <option value="4">Real Madrid 2013-2014</option>
-          <option value="5">Barcelona 2014-2015</option>
-          <option value="6">Real Madrid 2015-2016</option>
-          <option value="7">Real Madrid 2016-2017</option>
-          <option value="8">Real Madrid 2017-2018</option>
-          <option value="9">Liverpool 2018-2019</option>
-        </select>
+      <div id="selectors">
+          <div id="team1">
+          <h3>Select Team 1</h3>
+          <form id="pickEm" action="index.html">
+          <select class="form-control" id="team1" required>
+            <option value="">None</option>
+            <option value="0">Inter Milan 2009-2010</option>
+            <option value="1">Barcelona 2010-2011</option>
+            <option value="2">Chelsea 2011-2012</option>
+            <option value="3">Bayern Munich 2012-2013</option>
+            <option value="4">Real Madrid 2013-2014</option>
+            <option value="5">Barcelona 2014-2015</option>
+            <option value="6">Real Madrid 2015-2016</option>
+            <option value="7">Real Madrid 2016-2017</option>
+            <option value="8">Real Madrid 2017-2018</option>
+            <option value="9">Liverpool 2018-2019</option>
+          </select>
+        </div>
+        <br>
+        <div id="team2">
+          <h3>Select Team 2</h3>
+          <select class="form-control" id="team2" required>
+            <option value="">None</option>
+            <option value="0">Inter Milan 2009-2010</option>
+            <option value="1">Barcelona 2010-2011</option>
+            <option value="2">Chelsea 2011-2012</option>
+            <option value="3">Bayern Munich 2012-2013</option>
+            <option value="4">Real Madrid 2013-2014</option>
+            <option value="5">Barcelona 2014-2015</option>
+            <option value="6">Real Madrid 2015-2016</option>
+            <option value="7">Real Madrid 2016-2017</option>
+            <option value="8">Real Madrid 2017-2018</option>
+            <option value="9">Liverpool 2018-2019</option>
+          </select>
+        </div>
+        <br>
+        <button id="preview" type="submit" class="btn btn-primary">Preview</button>
       </div>
-      <br>
-      <div id="team2">
-        <h3>Select Team 2</h3>
-        <select class="form-control" id="team2">
-          <option></option>
-          <option value="0">Inter Milan 2009-2010</option>
-          <option value="1">Barcelona 2010-2011</option>
-          <option value="2">Chelsea 2011-2012</option>
-          <option value="3">Bayern Munich 2012-2013</option>
-          <option value="4">Real Madrid 2013-2014</option>
-          <option value="5">Barcelona 2014-2015</option>
-          <option value="6">Real Madrid 2015-2016</option>
-          <option value="7">Real Madrid 2016-2017</option>
-          <option value="8">Real Madrid 2017-2018</option>
-          <option value="9">Liverpool 2018-2019</option>
-        </select>
-      </div>
-      <br>
-      <button id="preview" type="button" class="btn btn-primary">Preview</button>
+    </form>
     </div>
     <div id="matchup" class="jumbotron">
     <div id="team1">

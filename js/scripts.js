@@ -57,7 +57,8 @@ game.array.push(Liverpool1819);
 
 //UI Logic
 $(document).ready(function() {
-  $("#preview").click(function(event) {
+  $("#pickEm").submit(function(event) {
+    event.preventDefault();
     var team1 = $("select#team1").val();
     var team2 = $("select#team2").val();
 
@@ -73,9 +74,9 @@ $(document).ready(function() {
     document.getElementById("team2CaptainPic").src=game.array[team2].captainPic;
     $("#team2Manager").append(game.array[team2].manager);
     document.getElementById("team2ManagerPic").src=game.array[team2].managerPic;
+
     $("#opening").hide();
     $("#matchup").show();
-
   //   if(team1==="Inter Milan 2009-2010") {
   //     $("#T1Inter10").show();
   //     $("#scorer").empty().append(Inter.scorer);
@@ -94,6 +95,7 @@ $(document).ready(function() {
   // $("#play").click(function(event) {
   //   $("#matchup").hide();
   //   $("#result").show();
+  })
   $("#play").click(function(event) {
     $("#matchup").hide();
     $("#result").show();
@@ -103,6 +105,5 @@ $(document).ready(function() {
     // console.log(def)
     // var coach = mindGames(game.array[team1].tactics, game.array[team2].tactics);
     // console.log(coach)
-  })
   })
 })
